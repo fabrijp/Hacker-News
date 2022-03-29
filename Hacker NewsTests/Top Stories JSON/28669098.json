@@ -1,0 +1,11 @@
+{
+    "by" : "gk1",
+    "descendants" : 11,
+    "id" : 28669098,
+    "kids" : [ 28669563, 28670040, 28669577, 28669494 ],
+    "score" : 21,
+    "time" : 1632738986,
+    "title" : "The Missing ”WHERE” Clause for Vector Search",
+    "type" : "story",
+    "url" : "https://www.pinecone.io/learn/vector-search-filtering/"
+}

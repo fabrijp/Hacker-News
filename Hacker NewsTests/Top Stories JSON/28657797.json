@@ -1,0 +1,11 @@
+{
+    "by" : "picture",
+    "descendants" : 5,
+    "id" : 28657797,
+    "kids" : [ 28669841, 28668902 ],
+    "score" : 56,
+    "time" : 1632622062,
+    "title" : "How to train large models on many GPUs?",
+    "type" : "story",
+    "url" : "https://lilianweng.github.io/lil-log/2021/09/24/train-large-neural-networks.html"
+}
