@@ -16,7 +16,7 @@ class HackerNewsAPI {
 
     /// Maximum stories to be fetched
     var maxItems: Int = 40
-    var baseURL = URL(string: "https://hacker-news.firebaseio.com/v0")!
+    static var baseURL = URL(string: "https://hacker-news.firebaseio.com/v0")!
 
     /// LocalizedError enumaration for the API
     enum APIFailureCondition: LocalizedError {
@@ -36,16 +36,14 @@ class HackerNewsAPI {
         case newStories
         case topStories
         
-        static let baseURL = URL(string: "https://hacker-news.firebaseio.com/v0")!
-        
         var url: URL {
             switch self {
                 case .story(let id):
-                    return EndPoint.baseURL.appendingPathComponent("/item/\(id).json")
+                    return baseURL.appendingPathComponent("/item/\(id).json")
                 case .newStories:
-                    return EndPoint.baseURL.appendingPathComponent("/newstories.json")
+                    return baseURL.appendingPathComponent("/newstories.json")
                 case .topStories:
-                    return EndPoint.baseURL.appendingPathComponent("/topstories.json")
+                    return baseURL.appendingPathComponent("/topstories.json")
             }
         }
 
