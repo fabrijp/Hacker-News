@@ -16,6 +16,7 @@ class HackerNewsAPI {
 
     /// Maximum stories to be fetched
     var maxItems: Int = 40
+    /// Base API URL
     static var baseURL = URL(string: "https://hacker-news.firebaseio.com/v0")!
 
     /// LocalizedError enumaration for the API
