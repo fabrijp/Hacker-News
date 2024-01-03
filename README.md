@@ -39,10 +39,6 @@ BONUS
 ● Minimize external dependencies
 
 
-![image](https://user-images.githubusercontent.com/4961474/160611576-560b8087-4282-499d-8002-5b351a8edbc0.png)
-![image](https://user-images.githubusercontent.com/4961474/160611727-c14431a4-79de-4d10-b6b4-82237852bc7f.png)
-
-
 UPDATES #1
 
 
@@ -53,4 +49,8 @@ UPDATES #1
 ● Improved UI
 
 ● Other small improvements
+
+
+![image](https://github.com/fabrijp/Hacker-News/assets/4961474/646645a7-f81e-4bac-8a60-5fe3b9bd5c86)
+![image](https://github.com/fabrijp/Hacker-News/assets/4961474/58612a6c-532d-4219-b253-02c64d01a9d6)
 
