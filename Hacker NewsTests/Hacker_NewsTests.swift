@@ -108,7 +108,7 @@ extension Hacker_NewsTests {
             // Reset stories
             stories.removeAll()
             // Fetch news stories ID from JSON file
-            let testSourceLocalFile = Bundle(for: type(of: self)).url(forResource: "\(storySource.endPointConvesion())".lowercased(), withExtension: "json")!
+            let testSourceLocalFile = Bundle(for: type(of: self)).url(forResource: "newstories".lowercased(), withExtension: "json")!
             api.allStoriesId(endPoint: testSourceLocalFile)
                 .sink { resp in
                     switch resp {
