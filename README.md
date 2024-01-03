@@ -51,6 +51,7 @@ UPDATES #1
 ● Other small improvements
 
 
-![image](https://github.com/fabrijp/Hacker-News/assets/4961474/646645a7-f81e-4bac-8a60-5fe3b9bd5c86)
-![image](https://github.com/fabrijp/Hacker-News/assets/4961474/58612a6c-532d-4219-b253-02c64d01a9d6)
 
+![Image](https://github.com/fabrijp/Hacker-News/assets/4961474/6eb2a045-f94b-4eb6-86d6-1155b49b282c)
+
+![Image](https://github.com/fabrijp/Hacker-News/assets/4961474/7a51e695-e798-4001-987a-85eef857a7c1)
