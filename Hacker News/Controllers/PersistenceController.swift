@@ -43,33 +43,49 @@ extension PersistenceController {
     ///   - storyRead: Flag to update the story state ( read/unread )
     ///   - overwrite: Flag to determine if story will be overwritten in case it already exists
     ///
-    func saveStory(story: StoryModel, storySource: StorySource, storyRead:Bool, overwrite:Bool = false) {
-        
+    func saveStory(story: StoryModel, storySource: StorySource, storyRead: Bool, overwrite: Bool = false) {
         // Get local story from storage
         let localStory = userDefaults.object(forKey: "\(storySource.rawValue)-\(story.id)")
+        
         // We have to make sure to have something to update
         if (storyRead || overwrite) && localStory == nil { return }
-        // We have to make sure if don't find anything, the story read state is false. It means the article is new and it should be saved.
-        if !storyRead && localStory != nil { return }        
-        // Set read flag
+        if !storyRead && localStory != nil { return }
+        
+        // save story
         var story = story
         story.read = storyRead
+        story.source = storySource
+        
         // Update userDefaults
         userDefaults.set(try? PropertyListEncoder().encode(story), forKey: "\(storySource.rawValue)-\(story.id)")
-        // Apply storage limitation
-        if totalItems+1 > maxItems {
-            let tmpStories = loadStories(storySource: storySource)
-            totalItems = maxItems
+        
+        if storySource == .bookmark || storyRead || overwrite { return }
+        
+        // Apply storage limitation but for Favorites
+        if storySource != .bookmark && totalItems + 1 > maxItems {
+            let tmpStories = loadStories(storySource: storySource, noCount: true)
             for (index, tmpStory) in tmpStories.enumerated() {
                 if index < maxItems {
                     userDefaults.set(try? PropertyListEncoder().encode(tmpStory), forKey: "\(storySource.rawValue)-\(tmpStory.id)")
                 } else {
-                    userDefaults.removeObject(forKey: "\(storySource.rawValue)-\(tmpStory.id)")
+                    removeStory(story: tmpStory, source: storySource)
                 }
             }
+            totalItems = maxItems
         } else {
-            // Increment unreadable stories
-            totalItems+=1
+            totalItems += 1
+        }
+    }
+
+    
+    func removeStory(story: StoryModel, source: StorySource) {
+        guard let storedStory = userDefaults.object(forKey: "\(source.rawValue)-\(story.id)") as? Data,
+              let existingStory = try? PropertyListDecoder().decode(StoryModel.self, from: storedStory) else {
+            return
+        }
+        // Check if the existing story's source matches the specified source
+        if existingStory.source == source {
+            userDefaults.removeObject(forKey: "\(source.rawValue)-\(story.id)")
         }
     }
     
@@ -84,19 +100,22 @@ extension PersistenceController {
     
     /// Local all stories from local storage and return it
     /// - Parameter storySource: Story source enum
+    /// - Parameter noCount: Flag to update the total of items with number of items loaded
     /// - Returns: Array of Story model in descending date order
-    func loadStories(storySource: StorySource) -> [StoryModel] {
-        var stories:[StoryModel] = []
-        // Iterate throught all saved stories
-        for (_, value) in userDefaults.dictionaryRepresentation().filter({$0.key.starts(with: "\(storySource.rawValue)")}) {
-            if let data = value as? Data, let story = try? PropertyListDecoder().decode(StoryModel.self, from: data) {
-                // Insert new story
-                stories.append(story)
-            }
+    func loadStories(storySource: StorySource, noCount: Bool = false) -> [StoryModel] {
+        
+        let storyKeys = userDefaults.dictionaryRepresentation().keys.filter { $0.starts(with: "\(storySource.rawValue)-") }
+        let stories = storyKeys.compactMap { key in
+            userDefaults.object(forKey: key) as? Data
+        }.compactMap { data in
+            try? PropertyListDecoder().decode(StoryModel.self, from: data)
         }
-        // Set current number of items loaded
-        totalItems = stories.count
-        // Return sorted by descending date/time
+        
+        if !noCount {
+            // update total items
+            totalItems = stories.count
+        }
+        
         return stories.sorted(by: { $0.time > $1.time })
     }
     
@@ -119,5 +138,4 @@ extension PersistenceController {
             return defaultSettings
         }
     }
-
 }

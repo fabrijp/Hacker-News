@@ -20,15 +20,18 @@ import SwiftUI
 ///
 public enum StorySource: String, CaseIterable, Codable {
     
-    case newStories = "New Stories"
-    case topStories = "Top Stories"
+    case newStories = "Recent News"
+    case topStories = "Top News"
+    case bookmark = "Bookmark"
     
-    // Convinient bridge from API endpoints
-    func endPointConvesion() -> HackerNewsAPI.EndPoint {
-        switch self {
-            case .newStories: return .newStories
-            case .topStories: return .topStories
-        }
+    // Convenient bridge from API endpoints
+    func endPointConversion() -> HackerNewsAPI.EndPoint? {
+        let endpoints: [StorySource: HackerNewsAPI.EndPoint] = [
+            .newStories: .newStories,
+            .topStories: .topStories
+        ]
+        
+        return endpoints[self]
     }
 }
 
@@ -70,35 +73,44 @@ protocol StoryControllerProtocol  {
 class StoryController: StoryControllerProtocol, ObservableObject {
     
     /* Protocol properties
-
-        stories         - Receives retrieved stories from API.
-        unreadStories   - Holds the current unread stories for selected story source.
-        fetchError      - Will be set when errors occurs while retrieving stories from API.
-
-    */
+     
+     stories         - Receives retrieved stories from API.
+     unreadStories   - Holds the current unread stories for selected story source.
+     fetchError      - Will be set when errors occurs while retrieving stories from API.
+     
+     */
     @Published var stories: [StoryModel] = []
     @Published var unreadStories: Int = 0
     @Published var fetchError: HackerNewsAPI.APIFailureCondition? = nil
     
     /* Class properties
-
-        cancellable     - A type-erasing cancellable object used when retrieving stories.
-        api             - The Hacker News API instance.
-        localStorage    - The Persistence storage instance.
-
+     
+     cancellable     - A type-erasing cancellable object used when retrieving stories.
+     api             - The Hacker News API instance.
+     localStorage    - The Persistence storage instance.
+     
      */
     var cancellable = Set<AnyCancellable>()
     let api = HackerNewsAPI()
     let localStorage = PersistenceController()
-
+    
     
     /// Fetch for new stories from selected source and update the `stories` property and
     /// save new stories locally.
     /// - Parameter storySource: Enum that controls the story souce for Hacker News articles
     func retrieveNewStories(from storySource: StorySource) {
         
+        if storySource == .bookmark {
+            // load bookmark stories from local storage and return
+            loadLocalStories(from: storySource)
+            return
+        }
+        
+        // unwrap source endpoint
+        guard let source = storySource.endPointConversion()?.url else { return }
+        
         // Fetch news stories ID from API
-        api.allStoriesId(endPoint: storySource.endPointConvesion().url)
+        api.allStoriesId(endPoint: source)
             .sink { error in
                 switch error {
                     case .failure(_):
@@ -112,7 +124,7 @@ class StoryController: StoryControllerProtocol, ObservableObject {
                 }
             } receiveValue: { newIds in
                 // Iterate all new story Ids limited by a max item number
-                for id in newIds.prefix(self.api.maxItems) {
+                for id in newIds.prefix(self.api.maxItems + self.api.maxItems) {
                     // Fetch the story from API
                     self.api.story(endPoint: HackerNewsAPI.EndPoint.story(id).url)
                         .sink { error in
@@ -162,6 +174,17 @@ class StoryController: StoryControllerProtocol, ObservableObject {
             withAnimation {
                 stories[index].read = true
                 unreadStories-=1
+            }
+        }
+    }
+    
+    func bookmark(story: StoryModel?) {
+        guard let story = story else { return }
+        guard let favorite = story.bookmark else { return }
+        // Update `stories` and `unreadStories` property for current story source articles.
+        if let index = stories.firstIndex(where: {$0.id == story.id}) {
+            withAnimation {
+                stories[index].bookmark = favorite
             }
         }
     }

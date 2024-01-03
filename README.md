@@ -43,4 +43,14 @@ BONUS
 ![image](https://user-images.githubusercontent.com/4961474/160611727-c14431a4-79de-4d10-b6b4-82237852bc7f.png)
 
 
+UPDATES #1
+
+
+● Added bookmark feature
+
+● Improved persistent storage
+
+● Improved UI
+
+● Other small improvements
 

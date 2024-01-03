@@ -21,4 +21,8 @@ public struct StoryModel: Codable, Identifiable {
     // Custom internal property.
     // Flag read stories by the user
     public var read: Bool?
+    // Bookmark
+    public var bookmark: Bool? = nil
+    // Source
+    public var source: StorySource? = nil
 }

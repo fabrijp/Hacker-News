@@ -22,9 +22,10 @@ struct TopBarOptionsView: View {
     @Binding var topScore: Bool
     @Binding var readAll: Bool
     @Binding var unreadStories: Int
+    @Binding var storySource: StorySource
     
     var body: some View {
-        HStack() {
+        HStack(spacing: 0) {
             Button(action: {
                 topScore.toggle()
             }, label: {
@@ -34,22 +35,24 @@ struct TopBarOptionsView: View {
                 readAll.toggle()
             } label: {
                 HStack(spacing: 3) {
-                    Image(systemName: "eye")
+                    Image(systemName: storySource == .bookmark ? "eye.fill":"eye")
                     Text("\(unreadStories)")
                         .font(.caption)
                 }
-                .frame(width: 65)
+                .frame(width: 55)
             }
+            .disabled(storySource == .bookmark)
             .opacity(unreadStories > 0 ? 1:0 )
+        
         }
-        .foregroundColor(.gray)
+        .foregroundColor(.orange)
         .padding(5)
     }
 }
 
 struct TopBarScore_Previews: PreviewProvider {
     static var previews: some View {
-        TopBarOptionsView(topScore: .constant(false), readAll: .constant(false), unreadStories: .constant(10))
+        TopBarOptionsView(topScore: .constant(false), readAll: .constant(false), unreadStories: .constant(10), storySource: .constant(.topStories))
             .previewLayout(.sizeThatFits)
     }
 }

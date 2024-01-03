@@ -12,18 +12,18 @@ struct ContentView: View {
     
     /* View Properties
         
-        storySource         - The selected story source to manage articles.
+        source              - The selected story source to manage articles.
         topScore            - Flag to sort articles order by its score number.
         readAll             - Flag to set all stories read state to true.
-        selectedStory       - The selected story to open a view and load it's url contents.
+        selected            - The selected story to open thw webview and load it's url contents.
         showWebView         - Flag to load the story in a sheet view
         storyController     = The StoryController instance to manage stories.
      
      */
-    @State private var storySource:StorySource = .newStories
+    @State private var source: StorySource = .newStories
     @State private var topScore = false
     @State private var readAll = false
-    @State private var selectedStory: StoryModel?
+    @State private var selected: StoryModel?
     @State private var showWebView: Bool = false
     @StateObject private var storyController = StoryController()
 
@@ -39,10 +39,13 @@ struct ContentView: View {
         List {
             ForEach(storyController.stories) { story in
                 Button {
-                    selectedStory = story
-                    showWebView.toggle()
+                    selected = story
+                    storyController.readStory(story: selected!)
+                    DispatchQueue.main.asyncAfter(deadline: .now()+0.15, execute: {
+                        showWebView.toggle()
+                    })
                 } label: {
-                    StoryCellView(story: .constant(story))
+                    StoryCellView(story: .constant(story), source: $source)
                         .padding([.top, .bottom], 5)
                 }
             }
@@ -54,60 +57,63 @@ struct ContentView: View {
         }
         // Present a Sheet View and load the story url
         .sheet(isPresented: $showWebView, onDismiss: {
-            withAnimation {
-                storyController.readStory(story: selectedStory!)
-            }
-            selectedStory = nil
+            selected = nil
         }, content: {
-            StoryWebView(story: $selectedStory)
+            StoryWebView(story: $selected) { favorite in
+                if source == .bookmark {
+                    storyController.loadLocalStories(from: source)
+                }
+                selected?.bookmark = favorite
+                storyController.bookmark(story: selected)
+            }
         })
         // Capture API errors
         .onChange(of: storyController.fetchError) { newValue in
             if newValue == .invalidServerResponse && storyController.stories.count == 0 {
                 // Load stories from local storage if no stories is loaded.
-                storyController.loadLocalStories(from: storySource)
+                storyController.loadLocalStories(from: source)
             }
         }
         // Capture Navigation Bar Item story source changes
-        .onChange(of: storySource, perform: { newValue in
+        .onChange(of: source, perform: { newValue in
             withAnimation {
                 storyController.stories.removeAll()
             }
             // We have to reset the topScore before retrieve new stories.
             topScore = false
-            storyController.retrieveNewStories(from: storySource)
+            storyController.retrieveNewStories(from: source)
         })
         // Capture Navigation Bar Item score option
         .onChange(of: topScore, perform: { newValue in
-            storyController.sortByScore(newValue)
+            withAnimation {
+                storyController.sortByScore(newValue)
+            }
         })
         // Capture Navigation Bar Item Read All button press
         .onChange(of: readAll, perform: { _ in
-            withAnimation {
-                storyController.readAllStories(from: storySource)
-            }
+            storyController.readAllStories(from: source)
         })
         // Retrieve stories when app change states, ie: Returning from backgound
         .onChange(of: scenePhase, perform: { newValue in
             if newValue == .active {
-                storyController.retrieveNewStories(from: storySource)
+                storyController.retrieveNewStories(from: source)
                 topScore = false
             }
         })
         // Retrieve stories when refreshing the view
         .refreshable {
-            storyController.retrieveNewStories(from: storySource)
+            storyController.retrieveNewStories(from: source)
             topScore = false
         }
         .onAppear {
-            storySource = storyController.localStorage.loadSettings().lastStorySource
+            source = storyController.localStorage.loadSettings().lastStorySource
         }
         // TopBar buttons and Story Source menu.
         // Passing Binding properties to keep track of actions to update the view.
         .navigationBarItems(leading: TopBarOptionsView(topScore: $topScore.animation(),
                                                        readAll: $readAll.animation(),
-                                                       unreadStories: $storyController.unreadStories.animation()),
-                            trailing: TopBarStorySourceView(storySource: $storySource.animation()))
+                                                       unreadStories: $storyController.unreadStories.animation(), storySource: $source),
+                            trailing: TopBarStorySourceView(storySource: $source.animation()))
         
     }
 }

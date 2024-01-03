@@ -15,12 +15,15 @@ struct TopBarStorySourceView: View {
     @Binding var storySource: StorySource
     
     var body: some View {
-        Picker("Source", selection: $storySource) {
-            ForEach(StorySource.allCases, id: \.self) {
-                Text($0.rawValue)
+        VStack(spacing: 0) {
+            Picker("Source", selection: $storySource) {
+                ForEach(StorySource.allCases, id: \.self) {
+                    Text($0.rawValue)
+                }
             }
+            .pickerStyle(.menu)
         }
-        .pickerStyle(.menu)
+        .accentColor(.orange)
     }
     
 }

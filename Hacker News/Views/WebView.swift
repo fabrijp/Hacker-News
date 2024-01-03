@@ -17,13 +17,17 @@ struct WebView: UIViewRepresentable {
     let urlString: String?
     
     func makeUIView(context: Context) -> WKWebView  {
-        return WKWebView()
+        let userContentController = addUserScripts()
+        let configuration = WKWebViewConfiguration()
+        configuration.userContentController = userContentController
+        
+        let webView = WKWebView(frame: .zero, configuration: configuration)
+        webView.navigationDelegate = context.coordinator
+        return webView
     }
     
     func updateUIView(_ webView: WKWebView, context: Context) {
         if let urlString = urlString, let url = URL(string: urlString) {
-            // Delegation to track when page finish loading
-            webView.navigationDelegate = context.coordinator
             // Load page
             webView.load(URLRequest(url: url))
         }
@@ -31,6 +35,16 @@ struct WebView: UIViewRepresentable {
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
+    }
+    
+    private func addUserScripts() -> WKUserContentController {
+        let userContentController = WKUserContentController()
+        
+        // Try to disable autoplay of videos
+        let script = WKUserScript(source: "document.querySelectorAll('video').forEach(v => v.pause());", injectionTime: .atDocumentEnd, forMainFrameOnly: false)
+        userContentController.addUserScript(script)
+        
+        return userContentController
     }
     
     // Delegation
@@ -52,5 +66,4 @@ struct WebView: UIViewRepresentable {
             self.parent = parent
         }
     }
-    
 }
