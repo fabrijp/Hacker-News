@@ -16,6 +16,8 @@ struct WebView: UIViewRepresentable {
     // The story url
     let urlString: String?
     
+    @State private var webView: WKWebView?
+    
     func makeUIView(context: Context) -> WKWebView  {
         let userContentController = addUserScripts()
         let configuration = WKWebViewConfiguration()
@@ -23,6 +25,11 @@ struct WebView: UIViewRepresentable {
         
         let webView = WKWebView(frame: .zero, configuration: configuration)
         webView.navigationDelegate = context.coordinator
+        webView.allowsBackForwardNavigationGestures = true
+        
+        DispatchQueue.main.async {
+            self.webView = webView
+        }
         return webView
     }
     
@@ -35,6 +42,14 @@ struct WebView: UIViewRepresentable {
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
+    }
+    
+    func goBack(){
+        webView?.goBack()
+    }
+    
+    func goForward(){
+        webView?.goForward()
     }
     
     private func addUserScripts() -> WKUserContentController {
