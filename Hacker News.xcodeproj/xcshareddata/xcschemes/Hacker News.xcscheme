@@ -48,6 +48,17 @@
                ReferencedContainer = "container:Hacker News.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AC1DA2372B46352F00F57624"
+               BuildableName = "Hacker News Tests.xctest"
+               BlueprintName = "Hacker News Tests"
+               ReferencedContainer = "container:Hacker News.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

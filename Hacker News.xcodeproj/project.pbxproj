@@ -7,80 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC1DA23B2B46353000F57624 /* Hacker_News_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1DA23A2B46353000F57624 /* Hacker_News_Tests.swift */; };
+		AC1DA2412B4635CD00F57624 /* 28669477.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824A9E2701E952003776FF /* 28669477.json */; };
+		AC1DA2422B4635CD00F57624 /* 28669472.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824A9F2701E95F003776FF /* 28669472.json */; };
+		AC1DA2432B4635CD00F57624 /* newstories.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824A942701E7E8003776FF /* newstories.json */; };
+		AC1DA2442B4635CD00F57624 /* 28669396.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AA32701E9B9003776FF /* 28669396.json */; };
+		AC1DA2452B4635CD00F57624 /* 28669397.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AA22701E9AF003776FF /* 28669397.json */; };
+		AC1DA2462B4635CD00F57624 /* 28669366.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AA52701E9CD003776FF /* 28669366.json */; };
+		AC1DA2472B4635CD00F57624 /* 28669439.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AA12701E9A4003776FF /* 28669439.json */; };
+		AC1DA2482B4635CD00F57624 /* 28669508.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824A9D2701E943003776FF /* 28669508.json */; };
+		AC1DA2492B4635CD00F57624 /* 28669514.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824A9B2701E8FC003776FF /* 28669514.json */; };
+		AC1DA24A2B4635CD00F57624 /* 28669353.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AA42701E9C3003776FF /* 28669353.json */; };
+		AC1DA24B2B4635CD00F57624 /* 28669451.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AA02701E96C003776FF /* 28669451.json */; };
+		AC1DA24C2B4635CD00F57624 /* 28669523.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824A982701E8B4003776FF /* 28669523.json */; };
+		AC1DA24D2B4635D500F57624 /* topstories.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824A962701E84D003776FF /* topstories.json */; };
+		AC1DA24E2B4635D500F57624 /* 28657797.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB82701FAE1003776FF /* 28657797.json */; };
+		AC1DA24F2B4635D500F57624 /* 28669178.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB22701FA20003776FF /* 28669178.json */; };
+		AC1DA2502B4635D500F57624 /* 28669098.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB42701FA60003776FF /* 28669098.json */; };
+		AC1DA2512B4635D500F57624 /* 28665918.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AC6270208B8003776FF /* 28665918.json */; };
+		AC1DA2522B4635D500F57624 /* 28665256.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB92701FB05003776FF /* 28665256.json */; };
+		AC1DA2532B4635D500F57624 /* 28667439.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB02701F9DA003776FF /* 28667439.json */; };
+		AC1DA2542B4635D500F57624 /* 28663719.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB72701FAB4003776FF /* 28663719.json */; };
+		AC1DA2552B4635D500F57624 /* 28667174.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB32701FA3E003776FF /* 28667174.json */; };
+		AC1DA2562B4635D500F57624 /* 28669095.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824ABA2701FB21003776FF /* 28669095.json */; };
+		AC1DA2572B4635D500F57624 /* 28667359.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB12701FA01003776FF /* 28667359.json */; };
+		AC1DA2582B4635D500F57624 /* 28664802.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB62701FA99003776FF /* 28664802.json */; };
 		AC824A392701C862003776FF /* Hacker_NewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A382701C862003776FF /* Hacker_NewsApp.swift */; };
 		AC824A402701C864003776FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC824A3F2701C864003776FF /* Preview Assets.xcassets */; };
-		AC824A4A2701C864003776FF /* Hacker_NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A492701C864003776FF /* Hacker_NewsTests.swift */; };
-		AC824A542701C864003776FF /* Hacker_NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A532701C864003776FF /* Hacker_NewsUITests.swift */; };
-		AC824A562701C864003776FF /* Hacker_NewsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A552701C864003776FF /* Hacker_NewsUITestsLaunchTests.swift */; };
 		AC824A712701C8AB003776FF /* HackerNewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A692701C8A4003776FF /* HackerNewsAPI.swift */; };
-		AC824A722701C8B0003776FF /* HackerNewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A692701C8A4003776FF /* HackerNewsAPI.swift */; };
 		AC824A732701C8BA003776FF /* StoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A632701C8A4003776FF /* StoryController.swift */; };
 		AC824A742701C8BF003776FF /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A642701C8A4003776FF /* PersistenceController.swift */; };
 		AC824A752701C8C5003776FF /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A662701C8A4003776FF /* SettingsModel.swift */; };
-		AC824A762701C8CA003776FF /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A662701C8A4003776FF /* SettingsModel.swift */; };
 		AC824A772701C8CD003776FF /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A672701C8A4003776FF /* StoryModel.swift */; };
-		AC824A782701C8CD003776FF /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A672701C8A4003776FF /* StoryModel.swift */; };
 		AC824A792701C8D2003776FF /* StoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A6B2701C8A4003776FF /* StoryCellView.swift */; };
 		AC824A7A2701C8D5003776FF /* TopBarOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A6C2701C8A4003776FF /* TopBarOptionsView.swift */; };
 		AC824A7B2701C8D9003776FF /* StoryWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A6D2701C8A4003776FF /* StoryWebView.swift */; };
 		AC824A7C2701C8DC003776FF /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A6E2701C8A4003776FF /* WebView.swift */; };
 		AC824A7D2701C8DF003776FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A6F2701C8A4003776FF /* ContentView.swift */; };
 		AC824A7E2701C8E1003776FF /* TopBarStorySourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A702701C8A4003776FF /* TopBarStorySourceView.swift */; };
-		AC824A7F2701CB2B003776FF /* StoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A632701C8A4003776FF /* StoryController.swift */; };
-		AC824A802701CB2E003776FF /* StoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A632701C8A4003776FF /* StoryController.swift */; };
-		AC824A812701CB31003776FF /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A642701C8A4003776FF /* PersistenceController.swift */; };
-		AC824A822701CB32003776FF /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A642701C8A4003776FF /* PersistenceController.swift */; };
-		AC824A832701CB35003776FF /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A662701C8A4003776FF /* SettingsModel.swift */; };
-		AC824A842701CB38003776FF /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A672701C8A4003776FF /* StoryModel.swift */; };
-		AC824A852701CB47003776FF /* HackerNewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A692701C8A4003776FF /* HackerNewsAPI.swift */; };
-		AC824A862701CB4E003776FF /* StoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A6B2701C8A4003776FF /* StoryCellView.swift */; };
-		AC824A872701CB4E003776FF /* StoryWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A6D2701C8A4003776FF /* StoryWebView.swift */; };
-		AC824A882701CB4E003776FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A6F2701C8A4003776FF /* ContentView.swift */; };
-		AC824A892701CB4E003776FF /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A6E2701C8A4003776FF /* WebView.swift */; };
-		AC824A8A2701CB4E003776FF /* TopBarOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A6C2701C8A4003776FF /* TopBarOptionsView.swift */; };
-		AC824A8B2701CB4E003776FF /* TopBarStorySourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A702701C8A4003776FF /* TopBarStorySourceView.swift */; };
-		AC824A8C2701CB4F003776FF /* StoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A6B2701C8A4003776FF /* StoryCellView.swift */; };
-		AC824A8D2701CB4F003776FF /* StoryWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A6D2701C8A4003776FF /* StoryWebView.swift */; };
-		AC824A8E2701CB4F003776FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A6F2701C8A4003776FF /* ContentView.swift */; };
-		AC824A8F2701CB4F003776FF /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A6E2701C8A4003776FF /* WebView.swift */; };
-		AC824A902701CB4F003776FF /* TopBarOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A6C2701C8A4003776FF /* TopBarOptionsView.swift */; };
-		AC824A912701CB4F003776FF /* TopBarStorySourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A702701C8A4003776FF /* TopBarStorySourceView.swift */; };
-		AC824A952701E7E8003776FF /* newstories.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824A942701E7E8003776FF /* newstories.json */; };
-		AC824A972701E84D003776FF /* topstories.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824A962701E84D003776FF /* topstories.json */; };
-		AC824A992701E8B4003776FF /* 28669523.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824A982701E8B4003776FF /* 28669523.json */; };
-		AC824A9C2701E901003776FF /* 28669514.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824A9B2701E8FC003776FF /* 28669514.json */; };
-		AC824AA72701F6C9003776FF /* 28669397.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AA22701E9AF003776FF /* 28669397.json */; };
-		AC824AA82701F6C9003776FF /* 28669353.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AA42701E9C3003776FF /* 28669353.json */; };
-		AC824AA92701F6C9003776FF /* 28669508.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824A9D2701E943003776FF /* 28669508.json */; };
-		AC824AAA2701F6C9003776FF /* 28669472.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824A9F2701E95F003776FF /* 28669472.json */; };
-		AC824AAB2701F6C9003776FF /* 28669396.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AA32701E9B9003776FF /* 28669396.json */; };
-		AC824AAC2701F6C9003776FF /* 28669477.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824A9E2701E952003776FF /* 28669477.json */; };
-		AC824AAD2701F6C9003776FF /* 28669439.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AA12701E9A4003776FF /* 28669439.json */; };
-		AC824AAE2701F6C9003776FF /* 28669366.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AA52701E9CD003776FF /* 28669366.json */; };
-		AC824AAF2701F6C9003776FF /* 28669451.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AA02701E96C003776FF /* 28669451.json */; };
-		AC824ABB2701FB56003776FF /* 28667439.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB02701F9DA003776FF /* 28667439.json */; };
-		AC824ABC2701FB56003776FF /* 28657797.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB82701FAE1003776FF /* 28657797.json */; };
-		AC824ABD2701FB56003776FF /* 28663719.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB72701FAB4003776FF /* 28663719.json */; };
-		AC824ABE2701FB56003776FF /* 28669098.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB42701FA60003776FF /* 28669098.json */; };
-		AC824AC02701FB56003776FF /* 28667359.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB12701FA01003776FF /* 28667359.json */; };
-		AC824AC12701FB56003776FF /* 28669095.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824ABA2701FB21003776FF /* 28669095.json */; };
-		AC824AC22701FB56003776FF /* 28667174.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB32701FA3E003776FF /* 28667174.json */; };
-		AC824AC32701FB56003776FF /* 28669178.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB22701FA20003776FF /* 28669178.json */; };
-		AC824AC42701FB56003776FF /* 28664802.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB62701FA99003776FF /* 28664802.json */; };
-		AC824AC52701FB56003776FF /* 28665256.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB92701FB05003776FF /* 28665256.json */; };
-		AC824AC727020CC9003776FF /* 28665918.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AC6270208B8003776FF /* 28665918.json */; };
 		AC824AC927031193003776FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC824A3C2701C864003776FF /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AC824A462701C864003776FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AC824A2D2701C862003776FF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AC824A342701C862003776FF;
-			remoteInfo = "Hacker News";
-		};
-		AC824A502701C864003776FF /* PBXContainerItemProxy */ = {
+		AC1DA23C2B46353000F57624 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AC824A2D2701C862003776FF /* Project object */;
 			proxyType = 1;
@@ -90,15 +59,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC1DA2382B46352F00F57624 /* Hacker News Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hacker News Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC1DA23A2B46353000F57624 /* Hacker_News_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hacker_News_Tests.swift; sourceTree = "<group>"; };
 		AC824A352701C862003776FF /* Hacker News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hacker News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC824A382701C862003776FF /* Hacker_NewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hacker_NewsApp.swift; sourceTree = "<group>"; };
 		AC824A3C2701C864003776FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Hacker News/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		AC824A3F2701C864003776FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AC824A452701C864003776FF /* Hacker NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hacker NewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC824A492701C864003776FF /* Hacker_NewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hacker_NewsTests.swift; sourceTree = "<group>"; };
-		AC824A4F2701C864003776FF /* Hacker NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hacker NewsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC824A532701C864003776FF /* Hacker_NewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hacker_NewsUITests.swift; sourceTree = "<group>"; };
-		AC824A552701C864003776FF /* Hacker_NewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hacker_NewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AC824A632701C8A4003776FF /* StoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryController.swift; sourceTree = "<group>"; };
 		AC824A642701C8A4003776FF /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		AC824A662701C8A4003776FF /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
@@ -138,21 +104,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AC1DA2352B46352F00F57624 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AC824A322701C862003776FF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AC824A422701C864003776FF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AC824A4C2701C864003776FF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -162,12 +121,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC1DA2392B46353000F57624 /* Hacker News Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AC824AA62701EACA003776FF /* Top Stories JSON */,
+				AC824A9A2701E8C5003776FF /* New Stories JSON */,
+				AC1DA23A2B46353000F57624 /* Hacker_News_Tests.swift */,
+			);
+			path = "Hacker News Tests";
+			sourceTree = "<group>";
+		};
 		AC824A2C2701C862003776FF = {
 			isa = PBXGroup;
 			children = (
 				AC824A372701C862003776FF /* Hacker News */,
-				AC824A482701C864003776FF /* Hacker NewsTests */,
-				AC824A522701C864003776FF /* Hacker NewsUITests */,
+				AC1DA2392B46353000F57624 /* Hacker News Tests */,
 				AC824A362701C862003776FF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -176,8 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				AC824A352701C862003776FF /* Hacker News.app */,
-				AC824A452701C864003776FF /* Hacker NewsTests.xctest */,
-				AC824A4F2701C864003776FF /* Hacker NewsUITests.xctest */,
+				AC1DA2382B46352F00F57624 /* Hacker News Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,25 +170,6 @@
 				AC824A3F2701C864003776FF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		AC824A482701C864003776FF /* Hacker NewsTests */ = {
-			isa = PBXGroup;
-			children = (
-				AC824A492701C864003776FF /* Hacker_NewsTests.swift */,
-				AC824A9A2701E8C5003776FF /* New Stories JSON */,
-				AC824AA62701EACA003776FF /* Top Stories JSON */,
-			);
-			path = "Hacker NewsTests";
-			sourceTree = "<group>";
-		};
-		AC824A522701C864003776FF /* Hacker NewsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AC824A532701C864003776FF /* Hacker_NewsUITests.swift */,
-				AC824A552701C864003776FF /* Hacker_NewsUITestsLaunchTests.swift */,
-			);
-			path = "Hacker NewsUITests";
 			sourceTree = "<group>";
 		};
 		AC824A622701C8A4003776FF /* Controllers */ = {
@@ -304,6 +252,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AC1DA2372B46352F00F57624 /* Hacker News Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC1DA23E2B46353000F57624 /* Build configuration list for PBXNativeTarget "Hacker News Tests" */;
+			buildPhases = (
+				AC1DA2342B46352F00F57624 /* Sources */,
+				AC1DA2352B46352F00F57624 /* Frameworks */,
+				AC1DA2362B46352F00F57624 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC1DA23D2B46353000F57624 /* PBXTargetDependency */,
+			);
+			name = "Hacker News Tests";
+			productName = "Hacker News Tests";
+			productReference = AC1DA2382B46352F00F57624 /* Hacker News Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		AC824A342701C862003776FF /* Hacker News */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC824A592701C864003776FF /* Build configuration list for PBXNativeTarget "Hacker News" */;
@@ -321,42 +287,6 @@
 			productReference = AC824A352701C862003776FF /* Hacker News.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AC824A442701C864003776FF /* Hacker NewsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AC824A5C2701C864003776FF /* Build configuration list for PBXNativeTarget "Hacker NewsTests" */;
-			buildPhases = (
-				AC824A412701C864003776FF /* Sources */,
-				AC824A422701C864003776FF /* Frameworks */,
-				AC824A432701C864003776FF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AC824A472701C864003776FF /* PBXTargetDependency */,
-			);
-			name = "Hacker NewsTests";
-			productName = "Hacker NewsTests";
-			productReference = AC824A452701C864003776FF /* Hacker NewsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AC824A4E2701C864003776FF /* Hacker NewsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AC824A5F2701C864003776FF /* Build configuration list for PBXNativeTarget "Hacker NewsUITests" */;
-			buildPhases = (
-				AC824A4B2701C864003776FF /* Sources */,
-				AC824A4C2701C864003776FF /* Frameworks */,
-				AC824A4D2701C864003776FF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AC824A512701C864003776FF /* PBXTargetDependency */,
-			);
-			name = "Hacker NewsUITests";
-			productName = "Hacker NewsUITests";
-			productReference = AC824A4F2701C864003776FF /* Hacker NewsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -364,19 +294,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					AC1DA2372B46352F00F57624 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = AC824A342701C862003776FF;
+					};
 					AC824A342701C862003776FF = {
 						CreatedOnToolsVersion = 13.0;
-					};
-					AC824A442701C864003776FF = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = AC824A342701C862003776FF;
-					};
-					AC824A4E2701C864003776FF = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = AC824A342701C862003776FF;
 					};
 				};
 			};
@@ -394,13 +320,43 @@
 			projectRoot = "";
 			targets = (
 				AC824A342701C862003776FF /* Hacker News */,
-				AC824A442701C864003776FF /* Hacker NewsTests */,
-				AC824A4E2701C864003776FF /* Hacker NewsUITests */,
+				AC1DA2372B46352F00F57624 /* Hacker News Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AC1DA2362B46352F00F57624 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC1DA2412B4635CD00F57624 /* 28669477.json in Resources */,
+				AC1DA2582B4635D500F57624 /* 28664802.json in Resources */,
+				AC1DA2532B4635D500F57624 /* 28667439.json in Resources */,
+				AC1DA24A2B4635CD00F57624 /* 28669353.json in Resources */,
+				AC1DA24F2B4635D500F57624 /* 28669178.json in Resources */,
+				AC1DA2512B4635D500F57624 /* 28665918.json in Resources */,
+				AC1DA2482B4635CD00F57624 /* 28669508.json in Resources */,
+				AC1DA24D2B4635D500F57624 /* topstories.json in Resources */,
+				AC1DA2502B4635D500F57624 /* 28669098.json in Resources */,
+				AC1DA2562B4635D500F57624 /* 28669095.json in Resources */,
+				AC1DA2462B4635CD00F57624 /* 28669366.json in Resources */,
+				AC1DA2452B4635CD00F57624 /* 28669397.json in Resources */,
+				AC1DA2422B4635CD00F57624 /* 28669472.json in Resources */,
+				AC1DA2552B4635D500F57624 /* 28667174.json in Resources */,
+				AC1DA24C2B4635CD00F57624 /* 28669523.json in Resources */,
+				AC1DA2522B4635D500F57624 /* 28665256.json in Resources */,
+				AC1DA2572B4635D500F57624 /* 28667359.json in Resources */,
+				AC1DA24E2B4635D500F57624 /* 28657797.json in Resources */,
+				AC1DA2442B4635CD00F57624 /* 28669396.json in Resources */,
+				AC1DA2492B4635CD00F57624 /* 28669514.json in Resources */,
+				AC1DA2432B4635CD00F57624 /* newstories.json in Resources */,
+				AC1DA24B2B4635CD00F57624 /* 28669451.json in Resources */,
+				AC1DA2472B4635CD00F57624 /* 28669439.json in Resources */,
+				AC1DA2542B4635D500F57624 /* 28663719.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AC824A332701C862003776FF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,47 +366,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC824A432701C864003776FF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AC824ABC2701FB56003776FF /* 28657797.json in Resources */,
-				AC824AC02701FB56003776FF /* 28667359.json in Resources */,
-				AC824AC727020CC9003776FF /* 28665918.json in Resources */,
-				AC824AC12701FB56003776FF /* 28669095.json in Resources */,
-				AC824AAC2701F6C9003776FF /* 28669477.json in Resources */,
-				AC824AAF2701F6C9003776FF /* 28669451.json in Resources */,
-				AC824AC52701FB56003776FF /* 28665256.json in Resources */,
-				AC824AC42701FB56003776FF /* 28664802.json in Resources */,
-				AC824A992701E8B4003776FF /* 28669523.json in Resources */,
-				AC824AAA2701F6C9003776FF /* 28669472.json in Resources */,
-				AC824AA82701F6C9003776FF /* 28669353.json in Resources */,
-				AC824AC32701FB56003776FF /* 28669178.json in Resources */,
-				AC824AA92701F6C9003776FF /* 28669508.json in Resources */,
-				AC824AAB2701F6C9003776FF /* 28669396.json in Resources */,
-				AC824ABE2701FB56003776FF /* 28669098.json in Resources */,
-				AC824AC22701FB56003776FF /* 28667174.json in Resources */,
-				AC824AA72701F6C9003776FF /* 28669397.json in Resources */,
-				AC824ABB2701FB56003776FF /* 28667439.json in Resources */,
-				AC824AAE2701F6C9003776FF /* 28669366.json in Resources */,
-				AC824A952701E7E8003776FF /* newstories.json in Resources */,
-				AC824A9C2701E901003776FF /* 28669514.json in Resources */,
-				AC824AAD2701F6C9003776FF /* 28669439.json in Resources */,
-				AC824A972701E84D003776FF /* topstories.json in Resources */,
-				AC824ABD2701FB56003776FF /* 28663719.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AC824A4D2701C864003776FF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AC1DA2342B46352F00F57624 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC1DA23B2B46353000F57624 /* Hacker_News_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AC824A312701C862003776FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -470,61 +396,66 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC824A412701C864003776FF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AC824A762701C8CA003776FF /* SettingsModel.swift in Sources */,
-				AC824A892701CB4E003776FF /* WebView.swift in Sources */,
-				AC824A782701C8CD003776FF /* StoryModel.swift in Sources */,
-				AC824A7F2701CB2B003776FF /* StoryController.swift in Sources */,
-				AC824A812701CB31003776FF /* PersistenceController.swift in Sources */,
-				AC824A4A2701C864003776FF /* Hacker_NewsTests.swift in Sources */,
-				AC824A882701CB4E003776FF /* ContentView.swift in Sources */,
-				AC824A862701CB4E003776FF /* StoryCellView.swift in Sources */,
-				AC824A8A2701CB4E003776FF /* TopBarOptionsView.swift in Sources */,
-				AC824A722701C8B0003776FF /* HackerNewsAPI.swift in Sources */,
-				AC824A872701CB4E003776FF /* StoryWebView.swift in Sources */,
-				AC824A8B2701CB4E003776FF /* TopBarStorySourceView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AC824A4B2701C864003776FF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AC824A852701CB47003776FF /* HackerNewsAPI.swift in Sources */,
-				AC824A902701CB4F003776FF /* TopBarOptionsView.swift in Sources */,
-				AC824A542701C864003776FF /* Hacker_NewsUITests.swift in Sources */,
-				AC824A8C2701CB4F003776FF /* StoryCellView.swift in Sources */,
-				AC824A832701CB35003776FF /* SettingsModel.swift in Sources */,
-				AC824A802701CB2E003776FF /* StoryController.swift in Sources */,
-				AC824A562701C864003776FF /* Hacker_NewsUITestsLaunchTests.swift in Sources */,
-				AC824A8E2701CB4F003776FF /* ContentView.swift in Sources */,
-				AC824A822701CB32003776FF /* PersistenceController.swift in Sources */,
-				AC824A8D2701CB4F003776FF /* StoryWebView.swift in Sources */,
-				AC824A842701CB38003776FF /* StoryModel.swift in Sources */,
-				AC824A8F2701CB4F003776FF /* WebView.swift in Sources */,
-				AC824A912701CB4F003776FF /* TopBarStorySourceView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AC824A472701C864003776FF /* PBXTargetDependency */ = {
+		AC1DA23D2B46353000F57624 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AC824A342701C862003776FF /* Hacker News */;
-			targetProxy = AC824A462701C864003776FF /* PBXContainerItemProxy */;
-		};
-		AC824A512701C864003776FF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AC824A342701C862003776FF /* Hacker News */;
-			targetProxy = AC824A502701C864003776FF /* PBXContainerItemProxy */;
+			targetProxy = AC1DA23C2B46353000F57624 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		AC1DA23F2B46353000F57624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q5M44XYC56;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.bitsbytes.Hacker-News-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hacker News.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hacker News";
+			};
+			name = Debug;
+		};
+		AC1DA2402B46353000F57624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q5M44XYC56;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.bitsbytes.Hacker-News-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hacker News.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hacker News";
+			};
+			name = Release;
+		};
 		AC824A572701C864003776FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -705,105 +636,18 @@
 			};
 			name = Release;
 		};
-		AC824A5D2701C864003776FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q5M44XYC56;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.bitsbytes.jp.Hacker-NewsTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hacker News.app/Hacker News";
-			};
-			name = Debug;
-		};
-		AC824A5E2701C864003776FF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q5M44XYC56;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.bitsbytes.jp.Hacker-NewsTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hacker News.app/Hacker News";
-			};
-			name = Release;
-		};
-		AC824A602701C864003776FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q5M44XYC56;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.bitsbytes.jp.Hacker-NewsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Hacker News";
-			};
-			name = Debug;
-		};
-		AC824A612701C864003776FF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q5M44XYC56;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.bitsbytes.jp.Hacker-NewsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Hacker News";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AC1DA23E2B46353000F57624 /* Build configuration list for PBXNativeTarget "Hacker News Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC1DA23F2B46353000F57624 /* Debug */,
+				AC1DA2402B46353000F57624 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AC824A302701C862003776FF /* Build configuration list for PBXProject "Hacker News" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -818,24 +662,6 @@
 			buildConfigurations = (
 				AC824A5A2701C864003776FF /* Debug */,
 				AC824A5B2701C864003776FF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AC824A5C2701C864003776FF /* Build configuration list for PBXNativeTarget "Hacker NewsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AC824A5D2701C864003776FF /* Debug */,
-				AC824A5E2701C864003776FF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AC824A5F2701C864003776FF /* Build configuration list for PBXNativeTarget "Hacker NewsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AC824A602701C864003776FF /* Debug */,
-				AC824A612701C864003776FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
