@@ -64,7 +64,7 @@ struct StoryWebView: View {
                             story?.bookmark = !(story?.bookmark ?? false)
                             if let favorite = story?.bookmark, let story = story {
                                 if favorite {
-                                    storyController.localStorage.saveStory(story: story, storySource: .bookmark, storyRead: false)
+                                    storyController.localStorage.saveStory(story: story, storySource: .bookmark, storyRead: false, overwrite: false)
                                 } else {
                                     storyController.localStorage.removeStory(story: story, source: .bookmark)
                                 }

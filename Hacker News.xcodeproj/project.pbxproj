@@ -32,6 +32,9 @@
 		AC1DA2562B4635D500F57624 /* 28669095.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824ABA2701FB21003776FF /* 28669095.json */; };
 		AC1DA2572B4635D500F57624 /* 28667359.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB12701FA01003776FF /* 28667359.json */; };
 		AC1DA2582B4635D500F57624 /* 28664802.json in Resources */ = {isa = PBXBuildFile; fileRef = AC824AB62701FA99003776FF /* 28664802.json */; };
+		AC1DA25A2B481DC900F57624 /* StoryControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1DA2592B481DC900F57624 /* StoryControllerProtocol.swift */; };
+		AC1DA25C2B481E0600F57624 /* HackerNewsApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1DA25B2B481E0600F57624 /* HackerNewsApiProtocol.swift */; };
+		AC1DA25E2B481E7900F57624 /* PersistenceControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1DA25D2B481E7900F57624 /* PersistenceControllerProtocol.swift */; };
 		AC824A392701C862003776FF /* Hacker_NewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A382701C862003776FF /* Hacker_NewsApp.swift */; };
 		AC824A402701C864003776FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC824A3F2701C864003776FF /* Preview Assets.xcassets */; };
 		AC824A712701C8AB003776FF /* HackerNewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC824A692701C8A4003776FF /* HackerNewsAPI.swift */; };
@@ -61,6 +64,9 @@
 /* Begin PBXFileReference section */
 		AC1DA2382B46352F00F57624 /* Hacker News Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hacker News Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1DA23A2B46353000F57624 /* Hacker_News_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hacker_News_Tests.swift; sourceTree = "<group>"; };
+		AC1DA2592B481DC900F57624 /* StoryControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryControllerProtocol.swift; sourceTree = "<group>"; };
+		AC1DA25B2B481E0600F57624 /* HackerNewsApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsApiProtocol.swift; sourceTree = "<group>"; };
+		AC1DA25D2B481E7900F57624 /* PersistenceControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceControllerProtocol.swift; sourceTree = "<group>"; };
 		AC824A352701C862003776FF /* Hacker News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hacker News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC824A382701C862003776FF /* Hacker_NewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hacker_NewsApp.swift; sourceTree = "<group>"; };
 		AC824A3C2701C864003776FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Hacker News/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
@@ -131,6 +137,23 @@
 			path = "Hacker News Tests";
 			sourceTree = "<group>";
 		};
+		AC1DA25F2B48EABD00F57624 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AC1DA2592B481DC900F57624 /* StoryControllerProtocol.swift */,
+				AC1DA25D2B481E7900F57624 /* PersistenceControllerProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		AC1DA2602B48EAD300F57624 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AC1DA25B2B481E0600F57624 /* HackerNewsApiProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		AC824A2C2701C862003776FF = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +198,7 @@
 		AC824A622701C8A4003776FF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AC1DA25F2B48EABD00F57624 /* Protocol */,
 				AC824A632701C8A4003776FF /* StoryController.swift */,
 				AC824A642701C8A4003776FF /* PersistenceController.swift */,
 			);
@@ -193,6 +217,7 @@
 		AC824A682701C8A4003776FF /* API */ = {
 			isa = PBXGroup;
 			children = (
+				AC1DA2602B48EAD300F57624 /* Protocol */,
 				AC824A692701C8A4003776FF /* HackerNewsAPI.swift */,
 			);
 			path = API;
@@ -295,7 +320,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					AC1DA2372B46352F00F57624 = {
 						CreatedOnToolsVersion = 15.1;
@@ -388,10 +413,13 @@
 				AC824A752701C8C5003776FF /* SettingsModel.swift in Sources */,
 				AC824A732701C8BA003776FF /* StoryController.swift in Sources */,
 				AC824A712701C8AB003776FF /* HackerNewsAPI.swift in Sources */,
+				AC1DA25C2B481E0600F57624 /* HackerNewsApiProtocol.swift in Sources */,
 				AC824A742701C8BF003776FF /* PersistenceController.swift in Sources */,
 				AC824A792701C8D2003776FF /* StoryCellView.swift in Sources */,
 				AC824A7B2701C8D9003776FF /* StoryWebView.swift in Sources */,
+				AC1DA25E2B481E7900F57624 /* PersistenceControllerProtocol.swift in Sources */,
 				AC824A772701C8CD003776FF /* StoryModel.swift in Sources */,
+				AC1DA25A2B481DC900F57624 /* StoryControllerProtocol.swift in Sources */,
 				AC824A7E2701C8E1003776FF /* TopBarStorySourceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -521,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

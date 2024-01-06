@@ -33,7 +33,7 @@ class PersistenceController: ObservableObject {
     
 }
 
-extension PersistenceController {
+extension PersistenceController: PersistenceControllerProtocol {
     
     /// Save story to local storage.
     /// If a story already exists, it will be discated otherwise overwrite is specified with `true` value.

@@ -35,42 +35,9 @@ public enum StorySource: String, CaseIterable, Codable {
     }
 }
 
-/**
- StoryControllerProtocol provides the interface that is
- intended for use by `StoryController` class.
- */
-protocol StoryControllerProtocol  {
-    
-    /* Properties
-     
-     stories         - Receives retrieved stories from API.
-     unreadStories   - Holds the current unread stories for selected story source.
-     fetchError      - Will be set when errors occurs while retrieving stories from API.
-     
-     */
-    var stories: [StoryModel] { get set }
-    var unreadStories: Int { get set }
-    var fetchError: HackerNewsAPI.APIFailureCondition? { get set }
-    
-    /* Methods
-     
-     retrieveNewStories     - Retrieve stories from API based on story source set and save to storage.
-     loadLocalStories       - Load stories from storage based on story source set.
-     readStory              - Will be set when errors occurs while retrieving stories from API.
-     sortByScore            - Holds the selected story source. Affects when retrieving stories from API.
-     
-     */
-    func retrieveNewStories(from storySource: StorySource)
-    func loadLocalStories(from storySource: StorySource)
-    func readStory(story: StoryModel)
-    func readAllStories(from storySource: StorySource)
-    func sortByScore(_ topScore:Bool)
-    
-}
-
 /// This class combines ( wrapper ) the Hacker News API and Persistence storage methods
 /// to manage all data and key observers.
-class StoryController: StoryControllerProtocol, ObservableObject {
+class StoryController: ObservableObject {
     
     /* Protocol properties
      
@@ -91,9 +58,17 @@ class StoryController: StoryControllerProtocol, ObservableObject {
      
      */
     var cancellable = Set<AnyCancellable>()
-    let api = HackerNewsAPI()
-    let localStorage = PersistenceController()
+    let api: HackerNewsApiProtocol
+    let localStorage: PersistenceControllerProtocol
     
+    init(api: HackerNewsApiProtocol = HackerNewsAPI(), localStorage: PersistenceControllerProtocol = PersistenceController()) {
+        self.api = api
+        self.localStorage = localStorage
+    }
+    
+}
+
+extension StoryController: StoryControllerProtocol {
     
     /// Fetch for new stories from selected source and update the `stories` property and
     /// save new stories locally.
@@ -137,7 +112,7 @@ class StoryController: StoryControllerProtocol, ObservableObject {
                             var story = story
                             story.read = false
                             // Save to local storage
-                            self.localStorage.saveStory(story: story, storySource: storySource, storyRead: false)
+                            self.localStorage.saveStory(story: story, storySource: storySource, storyRead: false, overwrite: false)
                             // Load all saved stories
                             self.loadLocalStories(from: storySource)
                         }
@@ -153,7 +128,7 @@ class StoryController: StoryControllerProtocol, ObservableObject {
     func loadLocalStories(from storySource: StorySource) {
         withAnimation {
             // Set `stories` property with local storage data
-            stories = localStorage.loadStories(storySource: storySource)
+            stories = localStorage.loadStories(storySource: storySource, noCount: false)
         }
         // Set unread stories
         unreadStories = stories.filter { $0.read == false }.count
@@ -205,5 +180,4 @@ class StoryController: StoryControllerProtocol, ObservableObject {
             stories.sort(by: topScore ? { $0.score > $1.score } : { $0.time > $1.time })
         }
     }
-    
 }

@@ -79,3 +79,5 @@ class HackerNewsAPI {
     }
     
 }
+
+extension HackerNewsAPI: HackerNewsApiProtocol {}
